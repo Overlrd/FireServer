@@ -1,6 +1,13 @@
 {
 
     "type": "module",
+    "name": "fire-server",
+    "description": "serve firebase fro standalone websites ",
+    "main": "index.js",
+    "engines": {
+        "node" : "16.x"
+    },
+
 
     "devDependencies": {
 
@@ -8,6 +15,11 @@
 
         "http": "^0.0.1-security"
 
+    },
+
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"no test specified\" &&exit 1"
     }
 
 }
