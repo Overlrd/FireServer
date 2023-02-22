@@ -34,8 +34,7 @@ const server = http.createServer((req, res) => {
       'Access-Control-Allow-Origin' : '*',
       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
   });
-    res.write(JSON.stringify(certarr));
-    res.end("test   hhshsh");
+    res.end(JSON.stringify(certarr));
   }
   else if (req.method === 'GET' && req.url === '/projects'){
     res.statusCode = 200;
