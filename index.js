@@ -29,7 +29,11 @@ const server = http.createServer((req, res) => {
   }
   else if (req.method === 'GET' && req.url === '/certification') {
     res.statusCode = 200;
-    res.setHeader('Content-Type','application/json');
+    res.writeHead(200, {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin' : '*',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+  });
     res.write(JSON.stringify(certarr));
     res.end();
   }
