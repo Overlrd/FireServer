@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
       'Access-Control-Allow-Origin' : '*',
       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
   });
-    res.write(certarr);
+    res.write(JSON.stringify(certarr));
     res.end("test   hhshsh");
   }
   else if (req.method === 'GET' && req.url === '/projects'){
