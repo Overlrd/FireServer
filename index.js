@@ -17,11 +17,17 @@ QuerySnapshot_again.forEach((doc) => {
     
 })
 
-
+let small_doc = {"/certfication" : "get certifications from firebase", "/projects" : "get project from firebae"}
 
 
 const server = http.createServer((req, res) => {
-  if (req.method === 'GET' && req.url === '/certification') {
+  if (req.method === 'GET' && req.url === '/'){
+    res.statusCode = 200;
+    res.setHeader('Content-Type','application/json');
+    res.write(JSON.stringify(small_doc));
+    res.end();
+  }
+  else if (req.method === 'GET' && req.url === '/certification') {
     res.statusCode = 200;
     res.setHeader('Content-Type','application/json');
     res.write(JSON.stringify(certarr));
