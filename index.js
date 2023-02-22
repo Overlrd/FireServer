@@ -17,7 +17,7 @@ QuerySnapshot_again.forEach((doc) => {
     
 })
 
-let small_doc = {"/certfication" : "get certifications from firebase", "/projects" : "get project from firebae"}
+let small_doc = {"/certfication" : "get certifications from firebase", "/projects" : "get project from firebase"}
 
 
 const server = http.createServer((req, res) => {
